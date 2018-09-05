@@ -9,7 +9,6 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    // "express-sessions": "^1.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-icons": "^2.2.5",
@@ -27,7 +26,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:5600",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devlemire/swag-node-shop.git"

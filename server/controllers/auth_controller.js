@@ -4,14 +4,13 @@ let id = 1
 
 module.exports = {
   login: (req, res, next) => {
-    console.log(req.body)
     const {session} = req
     const {username, password} = req.body 
 
     const user = users.find(user => {
-      user.username === username && user.password === password
-    })
-
+      return user.username === username && user.password === password
+    }
+  )
     if (user) {
       session.user.username = user.username
       res.status(200).send(session.user)
@@ -30,7 +29,7 @@ module.exports = {
 
     session.user.username = username
 
-    res.status(200).send(users)
+    res.status(200).send(session.user)
   },
 
   signOut: (req, res, next) => {
